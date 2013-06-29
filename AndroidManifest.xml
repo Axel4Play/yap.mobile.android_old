@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.yap.mobile_old"
-    android:versionCode="0412101"
-    android:versionName="1.01"
+    android:versionCode="0412102"
+    android:versionName="1.02"
     android:installLocation="auto" >
 
     <uses-sdk
