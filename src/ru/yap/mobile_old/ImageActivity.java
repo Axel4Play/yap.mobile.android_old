@@ -38,7 +38,13 @@ public class ImageActivity extends FragmentActivity {
 				.build()
 			);			
 		}
-		DisplayImageOptions options = new DisplayImageOptions.Builder().cacheOnDisc().build();
+		DisplayImageOptions options = new DisplayImageOptions.Builder()
+			.showStubImage(R.drawable.navigation_refresh_light)
+			.showImageOnFail(R.drawable.alerts_and_states_warning_light)
+			.resetViewBeforeLoading()
+			.cacheOnDisc()
+			.build();
+		
 		imageLoader.displayImage(getIntent().getStringExtra("url"), imageView, options);
 	}
 	
