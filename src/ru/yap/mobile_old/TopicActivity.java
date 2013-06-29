@@ -209,7 +209,8 @@ public class TopicActivity extends FragmentActivity implements ForumFragment.Cal
 	
 	public void onImageClick(View v) {
 		String url = v.getTag().toString();
-		if (url.substring(url.lastIndexOf(".")).toLowerCase(Locale.ENGLISH).equals(".gif")) {
+		if (url.substring(url.lastIndexOf(".")).toLowerCase(Locale.ENGLISH).equals(".gif")
+				|| android.os.Build.VERSION.SDK_INT < 8) {
 			Intent intent = new Intent(this, GifActivity.class);
 			intent.putExtra("url", url);
 			startActivity(intent);
@@ -223,7 +224,8 @@ public class TopicActivity extends FragmentActivity implements ForumFragment.Cal
 	public void onPreviewClick(View v) {
 		String[] url = v.getTag().toString().split("\\|");		
 		if (url[0].equals("img")) {
-			if (url[1].substring(url[1].lastIndexOf(".")).toLowerCase(Locale.ENGLISH).equals(".gif")) {
+			if (url[1].substring(url[1].lastIndexOf(".")).toLowerCase(Locale.ENGLISH).equals(".gif")
+					|| android.os.Build.VERSION.SDK_INT < 8) {
 				Intent intent = new Intent(this, GifActivity.class);
 				intent.putExtra("url", url[1]);
 				startActivity(intent);
