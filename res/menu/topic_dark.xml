@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_page"
+        android:title="@string/menu_pages"
+        android:orderInCategory="100" />
+
+<!-- 
+    <item
+        android:id="@+id/menu_create"
+        android:title="@string/menu_create"
+        android:icon="@drawable/content_edit_dark"
+        android:orderInCategory="200" />
+
+    <item
+        android:id="@+id/menu_preferences"
+        android:title="@string/menu_preferences"
+        android:icon="@drawable/action_settings_dark"
+        android:orderInCategory="300" />
+ -->
+
+</menu>
